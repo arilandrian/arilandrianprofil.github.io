@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website Profil Semantik - Muhammad Aril Andrian, Mahasiswa Ilmu Komputer Universitas Halu Oleo. Dibangun dengan Schema.org JSON-LD untuk keterbacaan mesin." />
+  <title>Profil Semantik — Muhammad Aril Andrian | Ilmu Komputer UHO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ═══════════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA — SCHEMA.ORG
+       Skema: Person, CollegeOrUniversity, DefinedTermSet, Project
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- 1. Person (Wajib) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "#aril",
+    "name": "Muhammad Aril Andrian",
+    "givenName": "Aril",
+    "gender": "Male",
+    "birthDate": "2004-12-12",
+    "birthPlace": {
+      "@type": "Place",
+      "name": "Kendari, Sulawesi Tenggara"
+    },
+    "email": "muharilandrian@gmail.com",
+    "telephone": "+6285314702438",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl Mekar Lrg Almunawarah",
+      "addressLocality": "Kendari",
+      "addressRegion": "Sulawesi Tenggara",
+      "addressCountry": "ID"
+    },
+    "url": "https://github.com/arilandrian",
+    "image": "",
+    "jobTitle": "Mahasiswa",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "@id": "#uho"
+    },
+    "knowsAbout": [
+      { "@type": "DefinedTerm", "@id": "#skill-roblox-seller" },
+      { "@type": "DefinedTerm", "@id": "#skill-roblox-admin" },
+      { "@type": "DefinedTerm", "@id": "#skill-web-basics" }
+    ],
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "@id": "#hmti",
+        "name": "Himpunan Ilmu Komputer",
+        "member": {
+          "@type": "OrganizationRole",
+          "roleName": "Divisi Minat dan Bakat",
+          "startDate": "2026",
+          "endDate": "2027"
+        }
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "SMA",
+        "recognizedBy": {
+          "@type": "HighSchool",
+          "name": "SMA Negeri 4 Kendari"
+        },
+        "dateCreated": "2023"
+      }
+    ]
+  }
+  </script>
+
+  <!-- 2. CollegeOrUniversity (Wajib) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "@id": "#uho",
+    "name": "Universitas Halu Oleo",
+    "alternateName": "UHO",
+    "url": "https://uho.ac.id",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. H.E.A. Mokodompit, Kampus Hijau Bumi Tridharma",
+      "addressLocality": "Kendari",
+      "addressRegion": "Sulawesi Tenggara",
+      "postalCode": "93232",
+      "addressCountry": "ID"
+    },
+    "department": {
+      "@type": "Organization",
+      "name": "Program Studi Ilmu Komputer",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Fakultas Matematika dan Ilmu Pengetahuan Alam"
+      }
+    }
+  }
+  </script>
+
+  <!-- 3. DefinedTermSet — Skills (Opsional 1) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "@id": "#skillset",
+    "name": "Keahlian Aril",
+    "hasDefinedTerm": [
+      {
+        "@type": "DefinedTerm",
+        "@id": "#skill-roblox-seller",
+        "name": "Seller Roblox",
+        "description": "Berpengalaman sebagai penjual item dan layanan dalam platform game Roblox."
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "#skill-roblox-admin",
+        "name": "Admin Toko Roblox",
+        "description": "Mengelola administrasi dan operasional toko virtual Roblox."
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "#skill-web-basics",
+        "name": "Dasar-Dasar Web",
+        "description": "Mengerti konsep dan fundamental pengembangan website."
+      }
+    ]
+  }
+  </script>
+
+  <!-- 4. Project (Opsional 2) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Project",
+    "@id": "#project-semantic-profile",
+    "name": "Website Profil Semantik",
+    "description": "Proyek pengembangan website profil pribadi yang mengimplementasikan teknologi Semantic Web menggunakan Schema.org dan JSON-LD untuk meningkatkan keterbacaan data oleh mesin pencari.",
+    "url": "https://github.com/arilandrian",
+    "founder": { "@type": "Person", "@id": "#aril" },
+    "dateCreated": "2025-06",
+    "keywords": ["Semantic Web", "Schema.org", "JSON-LD", "Profil Mahasiswa", "Roblox"],
+    "funding": {
+      "@type": "Grant",
+      "name": "Tugas UAS Mata Kuliah Semantik Web"
+    }
+  }
+  </script>
+
+</head>
+<body>
+
+  <!-- ═══════════ NAVIGATION — Floating Pill Bar ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-pill">
+      <a href="#hero" class="nav-logo">Aril<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#tentang" class="nav-link">Tentang</a></li>
+        <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
+        <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
+        <li><a href="#organisasi" class="nav-link">Organisasi</a></li>
+      </ul>
+      <a href="#kontak" class="btn btn-nav">Kontak →</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO — Lime Spark Band ═══════════ -->
+  <section class="band band-lime" id="hero">
+    <div class="container hero-layout">
+      <div class="hero-text">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          Mahasiswa Ilmu Komputer · UHO
+        </div>
+        <h1 class="display-title">
+          Halo,<br/>saya <span class="hero-underline">Aril</span>
+        </h1>
+        <p class="hero-sub">
+          Mahasiswa Semester 6 di <strong>Universitas Halu Oleo</strong>, Kendari.
+          Tertarik di bidang game development Roblox dan ingin membuat game sendiri.
+        </p>
+        <div class="hero-buttons">
+          <a href="#tentang" class="btn btn-primary">Jelajahi Profil ↓</a>
+          <a href="#kontak" class="btn btn-ghost">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="bento-cluster">
+          <div class="mini-card mc-cobalt">
+            <span class="mc-number" data-count="6">0</span>
+            <span class="mc-label">Semester</span>
+          </div>
+          <div class="mini-card mc-forest">
+            <span class="mc-number" data-count="3">0</span>
+            <span class="mc-label">Keahlian</span>
+          </div>
+          <div class="mini-card mc-mustard">
+            <span class="mc-number" data-count="1">0</span>
+            <span class="mc-label">Organisasi</span>
+          </div>
+          <div class="mini-card mc-maroon">
+            <span class="mc-number" data-count="4">0</span>
+            <span class="mc-label">Skema JSON-LD</span>
+          </div>
+          <div class="mini-card mc-lavender mc-wide">
+            <span class="mc-emoji">🎮</span>
+            <span class="mc-label">Game Dev · Roblox Enthusiast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TENTANG — Linen Canvas ═══════════ -->
+  <section class="band band-linen" id="tentang">
+    <div class="container">
+      <h2 class="section-heading">Tentang Saya</h2>
+      <div class="about-bento">
+        <div class="bento-card card-white card-identity">
+          <div class="card-label">👤 Identitas Diri</div>
+          <ul class="identity-list">
+            <li><span class="il-key">Nama Lengkap</span><span class="il-val">Muhammad Aril Andrian</span></li>
+            <li><span class="il-key">NIM</span><span class="il-val">F1G123024</span></li>
+            <li><span class="il-key">Tempat, Tgl Lahir</span><span class="il-val">Kendari, 12 Desember 2004</span></li>
+            <li><span class="il-key">Alamat</span><span class="il-val">Jl Mekar Lrg Almunawarah, Kendari</span></li>
+            <li><span class="il-key">Email</span><span class="il-val">muharilandrian@gmail.com</span></li>
+          </ul>
+        </div>
+        <div class="bento-card card-leaf card-desc">
+          <div class="card-label">🎯 Deskripsi</div>
+          <p>
+            Saya tertarik di bidang game development khususnya Roblox. 
+            Karena saya sangat menyukai game Roblox, saya memiliki keinginan besar untuk dapat 
+            mengembangkan dan membuat game Roblox sendiri.
+          </p>
+          <p>
+            Selain memiliki ketertarikan di bidang game, saya juga mempelajari dan mengerti mengenai dasar-dasar pengembangan web.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PENDIDIKAN — Cobalt Band ═══════════ -->
+  <section class="band band-cobalt" id="pendidikan">
+    <div class="container">
+      <h2 class="section-heading heading-light">Riwayat Pendidikan</h2>
+      <div class="edu-stack">
+        <div class="bento-card card-white card-edu">
+          <div class="edu-badge badge-lime">Sedang Ditempuh</div>
+          <h3 class="edu-title">Universitas Halu Oleo (UHO)</h3>
+          <p class="edu-role">S1 — Ilmu Komputer</p>
+          <p class="edu-period">Saat ini Semester 6</p>
+          <p class="edu-detail">
+            Fakultas Matematika dan Ilmu Pengetahuan Alam, Kendari.
+            Fokus pada ilmu komputer, pemrograman, dan pengembangan perangkat lunak/game.
+          </p>
+        </div>
+        <div class="bento-card card-white card-edu">
+          <h3 class="edu-title">SMA Negeri 4 Kendari</h3>
+          <p class="edu-role">Jurusan IPA</p>
+          <p class="edu-period">2020 — 2023</p>
+          <p class="edu-detail">
+            Menempuh pendidikan menengah atas dengan fokus pada ilmu pengetahuan alam di Kota Kendari.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ KEAHLIAN — Linen Canvas ═══════════ -->
+  <section class="band band-linen" id="keahlian">
+    <div class="container">
+      <h2 class="section-heading">Keahlian Teknis</h2>
+      <div class="skills-bento" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="bento-card card-lime skill-tile">
+          <span class="skill-emoji">🛍️</span>
+          <h3>Seller Roblox</h3>
+          <p>Berpengalaman dan memahami market/pasar di dalam ekosistem game Roblox.</p>
+          <div class="skill-meter"><div class="meter-fill" style="--pct:90%"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="bento-card card-cobalt-deep skill-tile">
+          <span class="skill-emoji">⚙️</span>
+          <h3>Admin Toko Roblox</h3>
+          <p>Mengelola operasional, administrasi, dan interaksi komunitas pada toko Roblox.</p>
+          <div class="skill-meter"><div class="meter-fill" style="--pct:85%"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="bento-card card-forest skill-tile">
+          <span class="skill-emoji">🌐</span>
+          <h3>Dasar-dasar Web</h3>
+          <p>Memahami teknologi HTML, CSS, dan fundamental pembuatan website.</p>
+          <div class="skill-meter"><div class="meter-fill" style="--pct:75%"></div></div>
+          <span class="skill-pct">75%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ORGANISASI — Maroon Band ═══════════ -->
+  <section class="band band-maroon" id="organisasi">
+    <div class="container">
+      <h2 class="section-heading heading-light">Keterlibatan Organisasi</h2>
+      <div class="org-bento" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="bento-card card-white card-org">
+          <div class="org-logo-circle" style="background:#0EA5E9;">H</div>
+          <h3>Himpunan Ilmu Komputer</h3>
+          <span class="org-role-pill">Divisi Minat dan Bakat</span>
+          <p class="org-period">2026 — 2027</p>
+          <p class="org-desc">
+            Berperan dalam mengembangkan dan mewadahi minat serta bakat mahasiswa Ilmu Komputer, 
+            termasuk potensi di bidang e-sports maupun pengembangan kreativitas.
+          </p>
+          <div class="tag-row">
+            <span class="pill-tag">Minat & Bakat</span>
+            <span class="pill-tag">Event</span>
+            <span class="pill-tag">Komunitas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ KONTAK — Leaf Wash ═══════════ -->
+  <section class="band band-leaf" id="kontak">
+    <div class="container">
+      <h2 class="section-heading">Kontak Saya</h2>
+      <div class="contact-bento">
+        <a href="mailto:muharilandrian@gmail.com" class="bento-card card-white contact-pill">
+          <span class="contact-emoji">✉️</span>
+          <div>
+            <h3>Email</h3>
+            <p>muharilandrian@gmail.com</p>
+          </div>
+        </a>
+        <a href="tel:+6285314702438" class="bento-card card-white contact-pill">
+          <span class="contact-emoji">📱</span>
+          <div>
+            <h3>Telepon/WA</h3>
+            <p>0853-1470-2438</p>
+          </div>
+        </a>
+        <a href="https://github.com/arilandrian" target="_blank" rel="noopener" class="bento-card card-white contact-pill">
+          <span class="contact-emoji">💻</span>
+          <div>
+            <h3>GitHub</h3>
+            <p>github.com/arilandrian</p>
+          </div>
+        </a>
+        <div class="bento-card card-white contact-pill">
+          <span class="contact-emoji">📍</span>
+          <div>
+            <h3>Lokasi</h3>
+            <p>Kendari, Sulawesi Tenggara</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Muhammad Aril Andrian<span class="logo-dot">.</span> — Profil Semantik</p>
+      <p class="footer-note">
+        Dibangun dengan <strong>Schema.org</strong> &amp; <strong>JSON-LD</strong> untuk UAS Semantik Web · Ilmu Komputer · Universitas Halu Oleo
+      </p>
+      <p class="footer-copy">© 2026 Aril</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
